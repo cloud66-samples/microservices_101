@@ -1,1 +1,0 @@
-docker-compose run --service-ports bricksandmortar middleman server -p 80 -b 0.0.0.0 --force-polling

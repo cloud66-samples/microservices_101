@@ -1,1 +1,0 @@
-app = angular.module 'demo', ['ngResource']
