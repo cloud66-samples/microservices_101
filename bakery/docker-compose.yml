@@ -41,9 +41,7 @@ services:
     tty: true
     ports:
       - "8002:80"  
-  #  volumes:
-  #    - ${PWD}/bricksandmortar/middleman:/home/app
-
+      
   accountant:
     build: ./accountant
     stdin_open: true
@@ -64,8 +62,6 @@ services:
     build: ./counter
     stdin_open: true
     tty: true
-    volumes:
-      - ${PWD}/counter:/home/app
     links:
       - mysql
       - mysql:mysql.cloud66.local
