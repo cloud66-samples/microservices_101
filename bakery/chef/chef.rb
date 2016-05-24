@@ -13,6 +13,8 @@ work_queue = ch.queue("bakery.order", :durable => true)
 bagel_queue = ch.queue("bakery.bagel.order", :durable => true)
 spacecake_queue = ch.queue("bakery.spacecake.order", :durable => true)
 donut_queue = ch.queue("bakery.donut.order", :durable => true)
+stroopwafel_queue = ch.queue("bakery.stroopwafel.order", :durable => true)
+
 
 
 ch.prefetch(1)
@@ -47,6 +49,11 @@ begin
        if task['kind'] == 'donut'
         task['amount'].times do |count|
           donut_queue.publish(payload, :persistent => true)
+        end
+      end
+      if task['kind'] == 'stroopwafel'
+        task['amount'].times do |count|
+          stroopwafel_queue.publish(payload, :persistent => true)
         end
       end
       logger.info "#{ENV['HOSTNAME']}:-- [x] Giving orders done"

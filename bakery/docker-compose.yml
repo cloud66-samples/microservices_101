@@ -12,6 +12,9 @@ services:
     command:
       - "--probe.docker"
       - "true"
+    ports:
+      - "4040:4040"
+
   picker:
     build: ./picker
     stdin_open: true
