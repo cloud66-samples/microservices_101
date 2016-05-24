@@ -1,5 +1,17 @@
 version: '2'
 services:
+  probe:
+    image: weaveworks/scope:0.13.1
+    network_mode: "host"
+    pid: "host"
+    privileged: true
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:rw"
+    environment:
+      - CHECKPOINT_DISABLE
+    command:
+      - "--probe.docker"
+      - "true"
   picker:
     build: ./picker
     stdin_open: true
@@ -75,6 +87,17 @@ services:
       - RABBITMQ_USERNAME=guest
       - RABBITMQ_PASSWORD=guest
 
+  stroopwafel:
+    build: ./minions/stroopwafel
+    stdin_open: true
+    tty: true
+    links:
+      - rabbitmq
+      - rabbitmq:rabbitmq.cloud66.local
+    environment:
+      - RABBITMQ_USERNAME=guest
+      - RABBITMQ_PASSWORD=guest
+
   bagel:
     build: ./minions/bagel
     stdin_open: true
@@ -93,8 +116,6 @@ services:
     links:
       - rabbitmq
       - rabbitmq:rabbitmq.cloud66.local
-   # volumes:
-   #   - ${PWD}/minions/donut:/home/app
     environment:
       - RABBITMQ_USERNAME=guest
       - RABBITMQ_PASSWORD=guest

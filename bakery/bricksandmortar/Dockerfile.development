@@ -24,7 +24,7 @@ COPY middleman /home/app
 
 #cache buster
 ENV CACHEBUSTER 14343167172222
-ENV COUNTER_ADDRESS 192.168.99.100:8000
+ENV COUNTER_ADDRESS localhost:8000
 
 #start middleman as development server
 RUN bundle exec middleman build --verbose

@@ -15,4 +15,5 @@ WORKDIR /home/app
 COPY . /home/app
 
 #start the bagel minion
+USER daemon
 CMD /home/app/start_bagel_minion.sh

@@ -7,9 +7,11 @@
 				.form-group
 					label for="kind" kind 
 					select.form-control name='kind' id="kind" ng-init="order.kind='bagel'" ng-model='order.kind'
-						option value="bagel" Bagel 
-						option value="spacecake" Spacecake 
-						option value="donut" Donut 
+						option value="bagel" Bagel (Ruby)
+						option value="spacecake" Spacecake (PHP)
+						option value="donut" Donut (Node)
+						option value="stroopwafel" Stroopwafel (Java) 
+						
 						
 				.form-group
 					label flavour 
@@ -18,7 +20,8 @@
 						option value="stawberry" Stawberry
 						option value="glitter" Glitter
 						option value="rum" Rum
-						
+						option value="peanutbutter" Peanutbutter
+
 				.form-group
 					label amount
 					input.form-control type='text' ng-init='order.amount=1' ng-model='order.amount'
