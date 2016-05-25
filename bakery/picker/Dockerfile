@@ -17,4 +17,5 @@ WORKDIR /home/app
 COPY . /home/app
 
 #start the picker
+RUN chmod +x /home/app/start_picker.sh
 CMD /home/app/start_picker.sh

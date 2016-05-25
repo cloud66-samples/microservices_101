@@ -10,4 +10,5 @@ COPY . /home/app
 RUN docker-php-ext-install mbstring bcmath
 
 #start the spacecake minion
+RUN chmod +x /home/app/start_spacecake_minion.sh
 CMD /home/app/start_spacecake_minion.sh

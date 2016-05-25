@@ -17,4 +17,5 @@ WORKDIR /home/app
 COPY . /home/app
 
 #start the bagel minion
+RUN chmod +x /home/app/start_counter.sh
 CMD /home/app/start_counter.sh

@@ -16,4 +16,5 @@ COPY . /home/app
 
 #start the bagel minion
 USER daemon
+RUN chmod +x /home/app/start_bagel_minion.sh
 CMD /home/app/start_bagel_minion.sh

@@ -10,4 +10,5 @@ COPY . /home/app
 RUN npm install amqplib
 
 #start the bagel minion
+RUN chmod +x /home/app/start_donut_minion.sh
 CMD /home/app/start_donut_minion.sh

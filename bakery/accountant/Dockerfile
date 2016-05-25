@@ -19,4 +19,5 @@ COPY . /home/app
 RUN bundle exec rake assets:precompile
 
 #start the accountant
+RUN chmod +x /home/app/start_accountant.sh
 CMD /home/app/start_accountant.sh
