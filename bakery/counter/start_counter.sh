@@ -18,6 +18,6 @@ function check_port() {
 	done
 }
 
-check_port "rabbitmq.cloud66.local" "5672"
-check_port "mysql.cloud66.local" "3306"
+check_port "rabbitmq" "5672"
+check_port "mysql" "3306"
 puma -p 80

@@ -18,5 +18,5 @@ function check_port() {
 	done
 }
 
-check_port "rabbitmq.cloud66.local" "5672"
+check_port "rabbitmq" "5672"
 node donut_minion.js

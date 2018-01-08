@@ -18,7 +18,7 @@ function check_port() {
 	done
 }
 
-check_port "counter.cloud66.local" "80"
-check_port "rabbitmq.cloud66.local" "5672"
+check_port "counter" "80"
+check_port "rabbitmq" "5672"
 
 ruby picker.rb
