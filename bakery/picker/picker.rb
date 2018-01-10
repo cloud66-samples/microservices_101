@@ -30,7 +30,7 @@ begin
       task = JSON.parse payload
       logger.info "#{ENV['HOSTNAME']}:-- [.] Received 1 fresh baked #{task['flavour']} #{task['kind']} for customer #{task['id']}"
       #POST http://xxx/v1/orders/1/sweet/done  - curl -X POST  -H "Accept: application/json" http://192.168.99.100:8000/v1/orders/1/sweet/done 
-      RestClient.post "http://counter/v1/orders/#{task['id']}/sweet/done", {}, :content_type => :json, :accept => :json
+      RestClient.post "http://api/v1/orders/#{task['id']}/sweet/done", {}, :content_type => :json, :accept => :json
       ch.ack(delivery_info.delivery_tag)
     end
 rescue Interrupt => _
