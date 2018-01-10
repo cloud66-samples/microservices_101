@@ -1,11 +1,13 @@
 version: '2'
 services:
   bricksandmortar:
+    command: middleman server
     build: 
       context: .
       dockerfile: Dockerfile.development
     stdin_open: true
     tty: true
     ports:
-      - "8002:80"
- 
+      - "3000:4567"
+    volumes:
+      - ${PWD}/middleman:/home/app
