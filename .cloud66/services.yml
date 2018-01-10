@@ -1,52 +1,59 @@
----
 version: 2
 services:
-  #frontend
-  bricksandmortar-frontend:
+  frontend:
     git_url: http://github.com/cloud66-samples/microservices_101.git
-    build_root: bakery/bricksandmortar
     git_branch: master
     ports:
-    - 80:80:443
-  #cms
-  accountant-cms:
+    - container: 80
+      http: 80
+      https: 443
+    dockerfile_path: Dockerfile
+    build_root: bakery/bricksandmortar
+  cms:
+    git_url: http://github.com/cloud66-samples/microservices_101.git
+    git_branch: master
+    ports:
+    - container: 80
+      http: 8000
+    dockerfile_path: Dockerfile
     env_vars:
       RAILS_ENV: production
-    deploy_command: bundle exec rake db:migrate
-    build_command: bundle exec rake db:migrate
-    git_url: http://github.com/cloud66-samples/microservices_101.git
     build_root: bakery/accountant
+  api:
+    git_url: http://github.com/cloud66-samples/microservices_101.git
     git_branch: master
     ports:
-    - 80:8000
-  counter-api:
+    - container: 80
+      http: 8001
+    dockerfile_path: Dockerfile
     env_vars:
       RACK_ENV: production
-    git_url: http://github.com/cloud66-samples/microservices_101.git
     build_root: bakery/counter
-    git_branch: master
-    ports:
-    - 80:8001
-  spacecake-worker:
+  worker-bakker-spacecake:
     git_url: http://github.com/cloud66-samples/microservices_101.git
+    git_branch: master
+    dockerfile_path: Dockerfile
     build_root: bakery/minions/spacecake
-    git_branch: master
-  bagel-worker:
+  worker-bakker-bagel:
     git_url: http://github.com/cloud66-samples/microservices_101.git
+    git_branch: master
+    dockerfile_path: Dockerfile
     build_root: bakery/minions/bagel
-    git_branch: master
-  donut-worker:
+  worker-bakker-donut:
     git_url: http://github.com/cloud66-samples/microservices_101.git
+    git_branch: master
+    dockerfile_path: Dockerfile
     build_root: bakery/minions/donut
-    git_branch: master
-  chef-worker:
+  worker-chef:
     git_url: http://github.com/cloud66-samples/microservices_101.git
+    git_branch: master
+    dockerfile_path: Dockerfile
     build_root: bakery/chef
-    git_branch: master
-  picker-worker:
+  worker-order-picker:
     git_url: http://github.com/cloud66-samples/microservices_101.git
-    build_root: bakery/picker
     git_branch: master
+    dockerfile_path: Dockerfile
+    build_root: bakery/picker
 databases:
 - mysql
 - rabbitmq
