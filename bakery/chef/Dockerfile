@@ -1,5 +1,7 @@
-FROM ruby:2.1.8-alpine
-RUN apk add --no-cache bash
+FROM ruby:2.1.8
+
+RUN apt-get update
+RUN apt-get install netcat -y
 
 #set working dir for caching
 WORKDIR /tmp
