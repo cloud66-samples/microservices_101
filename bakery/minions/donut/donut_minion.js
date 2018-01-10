@@ -10,7 +10,7 @@ console.log("--------------------------------");
 var ch_in;
 var ch_out;
 
-amqp.connect('amqp://' +process.env.RABBITMQ_USERNAME + ':' + process.env.RABBITMQ_PASSWORD +'@rabbitmq', function(err, conn) {
+amqp.connect('amqp://' +process.env.RABBITMQ_USERNAME + ':' + process.env.RABBITMQ_PASSWORD +'@' + process.env.RABBITMQ_HOST, function(err, conn) {
   ch_in = conn.createChannel();
   ch_in.assertQueue('bakery.donut.order', {durable: true});
   ch_out = conn.createChannel();

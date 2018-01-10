@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-define('HOST', 'rabbitmq');
+define('HOST', $_ENV['RABBITMQ_HOST']);
 define('PORT', 5672);
 define('USER', $_ENV['RABBITMQ_USERNAME']);
 define('PASS', $_ENV['RABBITMQ_PASSWORD']);
