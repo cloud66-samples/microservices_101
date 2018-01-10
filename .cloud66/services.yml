@@ -1,4 +1,4 @@
-version: 2
+---
 services:
   frontend:
     git_url: http://github.com/cloud66-samples/microservices_101.git
@@ -16,6 +16,7 @@ services:
     - container: 80
       http: 8000
     dockerfile_path: Dockerfile
+    deploy_command: bundle exec rake db:migrate
     env_vars:
       RAILS_ENV: production
     build_root: bakery/accountant
@@ -29,17 +30,17 @@ services:
     env_vars:
       RACK_ENV: production
     build_root: bakery/counter
-  worker-bakker-spacecake:
+  worker-baker-spacecake:
     git_url: http://github.com/cloud66-samples/microservices_101.git
     git_branch: master
     dockerfile_path: Dockerfile
     build_root: bakery/minions/spacecake
-  worker-bakker-bagel:
+  worker-baker-bagel:
     git_url: http://github.com/cloud66-samples/microservices_101.git
     git_branch: master
     dockerfile_path: Dockerfile
     build_root: bakery/minions/bagel
-  worker-bakker-donut:
+  worker-baker-donut:
     git_url: http://github.com/cloud66-samples/microservices_101.git
     git_branch: master
     dockerfile_path: Dockerfile

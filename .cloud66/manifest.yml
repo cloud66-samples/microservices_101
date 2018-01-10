@@ -1,0 +1,26 @@
+docker:
+  configuration:
+    version: '17.06.2-ce'
+  servers:
+  - server:
+      unique_name: kubemaster-host
+      size: n1-standard-2
+      region: europe-west1-b
+      vendor: googlecloud
+      key_name: Default
+mysql:
+  configuration:
+    version: '5.7'
+  servers:
+  - server:
+      unique_name: database-host
+      size: n1-standard-1
+      region: europe-west1-b
+      vendor: googlecloud
+      key_name: Default
+rabbitmq:
+  configuration:
+    version: ''
+  servers:
+  - server:
+      same_as: database-host
