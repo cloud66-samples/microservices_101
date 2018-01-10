@@ -5,7 +5,7 @@ require "bunny"
 require "json"
 require "logger"
 
-conn = conn = Bunny.new host: ENV['RABBITMQ_HOST'] || 'rabbitmq.cloud66.local', user: ENV['RABBITMQ_USERNAME'], pass: ENV['RABBITMQ_PASSWORD']
+conn = conn = Bunny.new host: ENV['RABBITMQ_HOST'] || 'rabbitmq', user: ENV['RABBITMQ_USERNAME'], pass: ENV['RABBITMQ_PASSWORD']
 conn.start
 
 ch   = conn.create_channel
