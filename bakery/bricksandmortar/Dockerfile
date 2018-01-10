@@ -23,7 +23,7 @@ COPY middleman /home/app
 
 
 #cache buster
-ENV CACHEBUSTER 1011
+ENV CACHEBUSTER $CACHE_BUSTER
 #domain name of the external counter API service
 ENV API_ADDRESS $API_ADDRESS
 
