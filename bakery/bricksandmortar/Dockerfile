@@ -23,9 +23,9 @@ COPY middleman /home/app
 
 
 #cache buster
-ENV CACHEBUSTER 232323
+ENV CACHEBUSTER 101
 #domain name of the external counter API service
-ENV COUNTER_ADDRESS $WEB_ADDRESS:8001
+ENV COUNTER_ADDRESS $WEB_ADDRESS_EXT:8001
 
 #start middleman as development server
 RUN bundle exec middleman build --verbose
