@@ -1,0 +1,139 @@
+/*
+    Provides a basic visual theme over Bootstrap v3.3.6
+*/
+
+body {
+    background: #efefef;
+    color: #52636b;
+}
+
+/*
+    Tables
+ */
+.Table td {
+    color: #666;
+}
+.Table thead th {
+    border-bottom: 1px solid #ddd !important;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 24px !important;
+}
+
+/*
+    Navbar
+ */
+.NavBar {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    position: relative;
+    background: #fff;
+    min-height: 90px;
+    margin-bottom: 40px;
+}
+.NavBar-title {
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 8px;
+    padding-left: 130px;
+}
+
+.Logo {
+    position: absolute;
+    top: 18px;
+    left: 30px;
+    width: 50px;
+}
+
+/*
+    Module
+ */
+
+.Module {
+    background: #fff;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    padding-left: 28px;
+    padding-right: 28px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.095);
+    margin-bottom: 38px;
+}
+
+.Module-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 16px;
+}
+
+.Module-title {
+    color: #242628;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
+
+.Image {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.095);
+}
+
+/*
+    Form elements
+ */
+label {
+    font-weight: 600;
+}
+.form-group {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.Button {
+    box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    background: #56BD41;
+    text-shadow: 0 1px 3px rgba(36,180,126,.4);
+    height: 41px;
+    transition: all .15s ease;
+
+    &:active {
+        transform: translateY(2px) !important;
+    }
+
+    &:hover {
+        box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.1);
+        color: #fff;
+        background: #43A238;
+    }
+}
+.form-control {
+    height: 40px;
+}
+
+/*
+    Utilities
+ */
+
+.u-textRight {
+    text-align: right;
+}
+.u-noMarginBottom {
+    margin-bottom: 0 !important;
+}
+.u-boxShadow {
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.095);
+}
+.u-floatRight {
+    float: right;
+}
+.u-fullWidth {
+    width: 100%;
+}
