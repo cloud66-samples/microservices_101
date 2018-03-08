@@ -15,7 +15,7 @@
 									option value="spacecake" Spacecake
 									option value="donut" Donut
 							.div class="col-md-6 mb-3"
-								label What flavour would you like?
+								label Choose a flavour!
 								select.form-control name='flavour' ng-init="order.flavour='cola'" ng-model='order.flavour'
 									option value="cola" Cola
 									option value="stawberry" Stawberry
@@ -28,7 +28,7 @@
 								label How many do you want?
 								input.form-control type='number' ng-init='order.amount=1' ng-model='order.amount'
 							.div class="col-md-6 mb-3"
-								button type="submit" ng-click="controller.orderstuff()" class="btn u-fullWidth Button" style="margin-top:25px" Order Now
+								button type="submit" ng-click="controller.orderstuff()" class="btn u-fullWidth Button" style="margin-top:24px" Add New Order
 		.col-sm-5
 			.div class="u-boxShadow"
 				img  class="Image" src='img/backery.jpg' width='100%' height='322'
