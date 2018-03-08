@@ -104,10 +104,12 @@ label {
     height: 44px;
     transition: all .15s ease;
 
-    &:active {
+    &:active{
         transform: translateY(2px) !important;
+    }
+    &:focus {
         color: #fff;
-        font-weight: 800;
+        outline: none !important;
     }
 
     &:hover {
