@@ -60,7 +60,7 @@ body {
     padding-right: 28px;
     border-radius: 5px;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.095);
-    margin-bottom: 38px;
+    margin-bottom: 30px;
 }
 
 .Module-header {
@@ -106,6 +106,8 @@ label {
 
     &:active {
         transform: translateY(2px) !important;
+        color: #fff;
+        font-weight: 800;
     }
 
     &:hover {
