@@ -64,8 +64,8 @@ services:
 
     ports:
       - "8000:80"  
-  rainbowcake:
-    build: ./minions/rainbowcake
+  spacecake:
+    build: ./minions/spacecake
     stdin_open: true
     tty: true
     links:

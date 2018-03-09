@@ -18,7 +18,7 @@ module Counter
 
     # GET http://xxx/v1/orders     - curl -X GET -H "Content-type: application/json" -H "Accept: application/json" http://192.168.99.100:8000/v1/orders
     # GET http://xxx/v1/orders/1    - curl -X GET -H "Content-type: application/json" -H "Accept: application/json" http://192.168.99.100:8000/v1/orders/1
-    # POST http://xxx/v1/orders/1   - curl -X POST --data '{"amount": 1,"flavour": "cola","kind": "rainbowcake"}' -H "Content-type: application/json" -H "Accept: application/json" http://192.168.99.100:8000/v1/orders
+    # POST http://xxx/v1/orders/1   - curl -X POST --data '{"amount": 1,"flavour": "cola","kind": "spacecake"}' -H "Content-type: application/json" -H "Accept: application/json" http://192.168.99.100:8000/v1/orders
     # POST http://xxx/v1/orders/1/sweet/done  - curl -X POST  -H "Accept: application/json" http://192.168.99.100:8000/v1/orders/1/sweet/done
 
 
@@ -47,7 +47,7 @@ module Counter
 
       desc 'Create a order.'
       params do
-        requires :kind, type: String, desc: 'The sweet goods', values: ['rainbowcake', 'bagel', 'donut']
+        requires :kind, type: String, desc: 'The sweet goods', values: ['spacecake', 'bagel', 'donut']
         requires :flavour, type: String, desc: 'Your favorite sweet flavour', values: ['strawberry', 'cola', 'glitter', 'rum']
         requires :amount, type: Integer, desc: 'Amount of sweet stuff.'
       end
