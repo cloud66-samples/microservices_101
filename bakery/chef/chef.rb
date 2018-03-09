@@ -11,7 +11,7 @@ conn.start
 ch   = conn.create_channel
 work_queue = ch.queue("bakery.order", :durable => true)
 bagel_queue = ch.queue("bakery.bagel.order", :durable => true)
-spacecake_queue = ch.queue("bakery.spacecake.order", :durable => true)
+rainbowcake_queue = ch.queue("bakery.rainbowcake.order", :durable => true)
 donut_queue = ch.queue("bakery.donut.order", :durable => true)
 
 
@@ -39,9 +39,9 @@ begin
            bagel_queue.publish(payload, :persistent => true)
         end
       end
-      if task['kind'] == 'spacecake'
+      if task['kind'] == 'rainbowcake'
         task['amount'].times do |count|
-          spacecake_queue.publish(payload, :persistent => true)
+          rainbowcake_queue.publish(payload, :persistent => true)
         end
       end
        if task['kind'] == 'donut'

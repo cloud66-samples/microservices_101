@@ -9,5 +9,5 @@ WORKDIR /home/app
 COPY . /home/app
 RUN docker-php-ext-install mbstring bcmath
 
-#start the spacecake minion
-CMD /home/app/start_spacecake_minion.sh
+#start the rainbowcake minion
+CMD /home/app/start_rainbowcake_minion.sh

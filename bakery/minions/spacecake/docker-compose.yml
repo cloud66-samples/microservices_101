@@ -1,6 +1,6 @@
 version: '2'
 services:
-  spacecake:
+  rainbowcake:
     build: .
     stdin_open: true
     tty: true

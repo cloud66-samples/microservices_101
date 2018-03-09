@@ -19,4 +19,4 @@ function check_port() {
 }
 
 check_port "rabbitmq" "5672"
-php spacecake_minion.php
+php rainbowcake_minion.php
